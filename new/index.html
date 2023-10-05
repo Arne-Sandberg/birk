@@ -4,8 +4,8 @@
 <head>
     <title>{{ property.title }} | {{ shop.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" type="text/css" href="https://arne-sandberg.github.io/birk/style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://arne-sandberg.github.io/birk/new/style.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
     <div>
         <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
-        <img class="hero-img" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-01.jpg" alt="home">
+        <img class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg" alt="home">
         <div class="hero-text">
             <h2>Test</h2>
         </div>
@@ -80,7 +80,7 @@
         </div>
         <div class="ppp-background-wrapper">
             <div class="ppp-background"
-                style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/bg-01.jpg);">
+                style="background-image: url(https://arne-sandberg.github.io/birk/assets/img/bg-01.jpg);">
             </div>
             <div class="background-color-dark"></div>
         </div>
@@ -118,7 +118,8 @@
                 </h3>
             </div>
             <div class="site-plan-text-block">
-                <img class="site-plan-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <img class="site-plan-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                    alt="">
                 <div class="site-plan-text">
                     text
                 </div>
@@ -137,7 +138,8 @@
                 <div class="site-details-text">
                     text
                 </div>
-                <img class="site-details-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <img class="site-details-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                    alt="">
             </div>
         </div>
     </div>
@@ -151,7 +153,7 @@
                 <div class="features-text-block">
                     <div class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
                         <div>
                             <div class="features-inside-text-title">Modern & Safe Living</div>
                             <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare felis. Nam
@@ -162,7 +164,7 @@
                     </div>
                     <div class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Peaceful Location
@@ -176,7 +178,7 @@
                     </div>
                     <di class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Great Starting Prices
@@ -200,7 +202,7 @@
             </div>
             <div class="more-contact-content-background-wrapper">
                 <div class="more-contact-content-background"
-                    style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/bg-01.jpg);">
+                    style="background-image: url(https://arne-sandberg.github.io/birk/assets/img/bg-01.jpg);">
                 </div>
                 <div class="more-contact-background-color-dark"></div>
             </div>
@@ -215,7 +217,8 @@
                 </h3>
             </div>
             <div class="site-plan-text-block">
-                <img class="site-plan-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <img class="site-plan-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                    alt="">
                 <div class="site-plan-text">
                     text
                 </div>
@@ -234,7 +237,8 @@
                 <div class="site-details-text">
                     text
                 </div>
-                <img class="site-details-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <img class="site-details-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                    alt="">
             </div>
         </div>
     </div>
@@ -294,13 +298,96 @@
         </div>
     </div>
 
-    <div class="quote-content">Zitat</div>
+    <div class="quote-content">
+        <div class="container">
+            <div class="quote-text-block background-is-dark">
+                Zitat
+            </div>
+            <div class="quote-background-wrapper">
+                <div class="quote-background"
+                    style="background-image: url(https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg);">
+                </div>
+                <div class="quote-background-color-dark"></div>
+            </div>
+        </div>
+    </div>
 
-    <div id="contact" class="agent-content">Agent</div>
+    <div id="contact" class="agent-content">
+        <div class="container">
+            <div class="agent-block">
+                <div class="agent-description-section">
+                    <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
+                    {{broker.name}}
+                    {{broker.position}}
+                    <a href="mailto:{{ broker.contactEmail }}">{{ broker.contactEmail }}</a>
+                    {% if broker.contactPhone %}
+                    <a href="tel:{{ broker.contactPhone }}">{{ broker.contactPhone }}</a>
+                    {% endif %}
+                    {% if broker.contactCell %}
+                    <a href="tel:{{ broker.contactPhone }}">{{ broker.contactCell }}</a>
+                    {% endif %}
+                </div>
+                <div>
+                    contact
+                </div>
+            </div>
+        </div>
 
-    <div class="other-projects-content">Andere Objecte</div>
+    </div>
 
-    <div class="logo-slider-content">Logo Slider</div>
+    <div class="other-projects-content">
+        <div class="container">
+            <div class="other-projects-text-wrapper">
+                <div class="other-projects-text-block">
+                    <div class="other-projects-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="other-projects-inside-text-title">Modern & Safe Living</div>
+                            <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare felis. Nam
+                                velit
+                                neque, blandit id placerat eu,
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-projects-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="other-projects-inside-text-title">
+                                Peaceful Location
+                            </div>
+                            <div>
+                                Mauris ac ornare felis. Nam velit neque, blandit id placerat eu, venenatis at purus.
+                                Nunc
+                                maximus ultrices lacus
+                            </div>
+                        </div>
+                    </div>
+                    <di class="other-projects-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="other-projects-inside-text-title">
+                                Great Starting Prices
+                            </div>
+                            <div>
+                                Nam velit neque, blandit id placerat eu, venenatis at purus. Nunc maximus ultrices
+                                lacus eu
+                                fringilla. Mauris ac ornare
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-slider-content">
+        <div class="container">
+            Logo Slider
+        </div>
+    </div>
 
     <div class="footer">
         <div class="container">
@@ -308,7 +395,7 @@
         </div>
         <div class="footer-background-wrapper">
             <div class="footer-background"
-                style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/footer-bg.jpg);">
+                style="background-image: url(https://arne-sandberg.github.io/birk/assets/img/footer-bg.jpg);">
             </div>
             <div class="background-color-dark"></div>
         </div>
