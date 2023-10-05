@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>{{ property.title }} | {{ shop.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://arne-sandberg.github.io/birk/style.css">
+</head>
+
+<body>
+
+    <div id="home"></div>
+
+    <div class="navigation">
+        <div class="container">
+            <div class="header">
+                <div class="left">
+                    <img src="{{ shop.logoUrl }}" alt="Logo" class="logo-nav" />
+                </div>
+                <div class="right">
+                    <div class="nav">
+                        <a href="#home" id="home-nav" class="nav-element" onclick="stateNav(event)">
+                            <span>Home</span>
+                        </a>
+                        <a href="#site" id="site-nav" class="nav-element" onclick="stateNav(event)">
+                            Lage
+                        </a>
+                        <a href="#concept" id="concept-nav" class="nav-element" onclick="stateNav(event)">
+                            Konzept
+                        </a>
+                        <a href="#pricing" id="pricing-nav" class="nav-element" onclick="stateNav(event)">
+                            Preis
+                        </a>
+                        <a href="#gallery" id="gallery-nav" class="nav-element" onclick="stateNav(event)">
+                            Gallery
+                        </a>
+                        <a href="#contact" id="contact-nav" class="nav-element" onclick="stateNav(event)">
+                            Kontakt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
+        <img class="hero-img" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-01.jpg" alt="home">
+        <div class="hero-text">
+            <h2>Test</h2>
+        </div>
+    </div>
+
+    <div class="ppp-content">
+        <div class="container">
+            <div class="ppp-text-block">
+                <div>
+                    <img class="icon" src="" alt="i1">
+                    <div class="ppp-inside-text-block">
+                        <div class="background-is-dark z-index-plus">Überschrift</div>
+                        <div class="background-is-dark z-index-plus">Text</div>
+                    </div>
+                </div>
+                <div>
+                    <img class="icon" src="" alt="i1">
+                    <div class="ppp-inside-text-block">
+                        <div class="background-is-dark z-index-plus">Überschrift</div>
+                        <div class="background-is-dark z-index-plus">Text</div>
+                    </div>
+                </div>
+                <div>
+                    <img class="icon" src="" alt="i1">
+                    <div class="ppp-inside-text-block">
+                        <div class="background-is-dark z-index-plus">Überschrift</div>
+                        <div class="background-is-dark z-index-plus">Text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ppp-background-wrapper">
+            <div class="ppp-background"
+                style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/bg-01.jpg);">
+            </div>
+            <div class="background-color-dark"></div>
+        </div>
+
+    </div>
+
+    <div class="key-fact-list-content">
+        <div class="container">
+            <div class="kfl-text-block">
+                <div class="kfl-inside-text-block">
+                    <img src="" alt="i1">
+                    <div>Key Facts A</div>
+                </div>
+                <div class="kfl-inside-text-block">
+                    <img src="" alt="i2">
+                    <div>Key Facts B</div>
+                </div>
+                <div class="kfl-inside-text-block">
+                    <img src="" alt="i3">
+                    <div>Key Facts C</div>
+                </div>
+                <div class="kfl-inside-text-block">
+                    <img src="" alt="i1">
+                    <div>Key Facts D</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="site" class="site-plan-content">
+        <div class="container">
+            <div class="site-plan-title">
+                <h3 class="site-plan-framed">
+                    Lageplan
+                </h3>
+            </div>
+            <div class="site-plan-text-block">
+                <img class="site-plan-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <div class="site-plan-text">
+                    text
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-details-content">
+        <div class="container">
+            <div class="site-details-title">
+                <h3 class="site-details-framed">
+                    Lagedetails
+                </h3>
+            </div>
+            <div class="site-details-text-block">
+                <div class="site-details-text">
+                    text
+                </div>
+                <img class="site-details-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="concept" class="features-content">
+        <div class="container">
+            <div class="features-text-wrapper">
+                <div class="features-title">
+                    Features.
+                </div>
+                <div class="features-text-block">
+                    <div class="features-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="features-inside-text-title">Modern & Safe Living</div>
+                            <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare felis. Nam
+                                velit
+                                neque, blandit id placerat eu,
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="features-inside-text-title">
+                                Peaceful Location
+                            </div>
+                            <div>
+                                Mauris ac ornare felis. Nam velit neque, blandit id placerat eu, venenatis at purus.
+                                Nunc
+                                maximus ultrices lacus
+                            </div>
+                        </div>
+                    </div>
+                    <di class="features-inside-text-block">
+                        <img class="image-inside-text-block "
+                            src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-big-04.jpg" alt="p1">
+                        <div>
+                            <div class="features-inside-text-title">
+                                Great Starting Prices
+                            </div>
+                            <div>
+                                Nam velit neque, blandit id placerat eu, venenatis at purus. Nunc maximus ultrices
+                                lacus eu
+                                fringilla. Mauris ac ornare
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="more-contact-content">
+        <div class="container">
+            <div class="more-contact-content-text-block background-is-dark">
+                more-contact-content
+            </div>
+            <div class="more-contact-content-background-wrapper">
+                <div class="more-contact-content-background"
+                    style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/bg-01.jpg);">
+                </div>
+                <div class="more-contact-background-color-dark"></div>
+            </div>
+        </div>
+    </div>
+    <!-- TODO class -->
+    <div class="details-content">
+        <div class="container">
+            <div class="site-plan-title">
+                <h3 class="site-plan-framed">
+                    Details
+                </h3>
+            </div>
+            <div class="site-plan-text-block">
+                <img class="site-plan-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+                <div class="site-plan-text">
+                    text
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TODO class -->
+    <div class="apartment-furnishings-content">
+        <div class="container">
+            <div class="site-details-title">
+                <h3 class="site-details-framed">
+                    apartment-furnishings-content
+                </h3>
+            </div>
+            <div class="site-details-text-block">
+                <div class="site-details-text">
+                    text
+                </div>
+                <img class="site-details-image" src="/home/arne/Dokumente/Kunde/Birk/assets/img/gallery-01.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="pricing" class="pricing-content">
+        <div class="container">
+            <div class="pricing-title">
+                Pricing.
+            </div>
+            <div class="pricing-options">
+                <div>Choose your apartment</div>
+                <div>2 Room</div>
+                <div>3 Room</div>
+                <div>4 Room</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chose-apartment-content">
+        <div class="container">
+            <div class="chose-apartment-title">
+                Chose your apartment.
+            </div>
+            <div class="chose-apartment-options">
+                <div>Apartment</div>
+                <div>Rooms</div>
+                <div>Building</div>
+                <div>Floor</div>
+                <div>Apartment area</div>
+                <div>Balcony area</div>
+                <div>Price</div>
+                <div>Status</div>
+                <div>Link</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="gallery-content">
+        <div class="container">
+            <div class="gallery-title">
+                Gallery.
+            </div>
+            <div class="gallery-block">
+                <div class="gallery-item">
+                    A
+                </div>
+                <div class="gallery-item">
+                    A
+                </div>
+                <div class="gallery-item">
+                    A
+                </div>
+                <div class="gallery-item">
+                    A
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-content">Zitat</div>
+
+    <div id="contact" class="agent-content">Agent</div>
+
+    <div class="other-projects-content">Andere Objecte</div>
+
+    <div class="logo-slider-content">Logo Slider</div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-text-block background-is-dark">Footer</div>
+        </div>
+        <div class="footer-background-wrapper">
+            <div class="footer-background"
+                style="background-image: url(/home/arne/Dokumente/Kunde/Birk/assets/img/footer-bg.jpg);">
+            </div>
+            <div class="background-color-dark"></div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    function stateNav(e) {
+        console.log(e.target.id)
+    }
+
+
+</script>
+
+</html>
