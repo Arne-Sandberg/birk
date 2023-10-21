@@ -9,13 +9,25 @@
     <script>
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
-        async function imgSlider(){
-            console.log("test");
-            var t1 = document.getElementById("test1").src
-            console.log(t1);
-            await delay(12000);
-            console.log("test1");
-            document.getElementById("test1").src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-02.jpg"
+        async function imgSlider() {
+            const picture1 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
+            const picture2 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-02.jpg"
+            const picture3 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-03.jpg"
+            const picture4 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+
+            const pictures = [picture1, picture2, picture3, picture4 ]
+
+            for (let i = 0; i < pictures.length; i++) {
+                console.log(i, pictures.length)
+                console.log("1")
+                await delay(6000);
+                console.log("2")
+                document.getElementById("test1").src = pictures[i]
+                if (i === (pictures.length - 1)) {
+                    console.log("hihi")
+                    i = -1;
+                }
+            }
         }
     </script>
 </head>
@@ -58,7 +70,8 @@
 
     <div>
         <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
-        <img id="test1" class="hero-img trans" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg" alt="home">
+        <img id="test1" class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
+            alt="home">
         <div class="hero-text">
             <h2>Test</h2>
         </div>
