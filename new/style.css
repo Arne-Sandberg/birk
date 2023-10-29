@@ -437,7 +437,7 @@ body {
 /** */
 
 .gallery-content {
-    height: 740px;
+    min-height: 740px;
 }
 
 .gallery-title {
