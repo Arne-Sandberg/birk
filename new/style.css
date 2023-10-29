@@ -38,6 +38,11 @@ body {
     background-color: transparent;
 }
 
+/* CSS für die Navigationsleiste mit schwarzer Hintergrundfarbe */
+.navigation.black-bg {
+    background-color: black;
+}
+
 /* .navigation black after */
 
 .header {

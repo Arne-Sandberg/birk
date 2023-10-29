@@ -29,6 +29,20 @@
                 }
             }
         }
+        // JavaScript-Code, um den Scroll-Event zu überwachen
+        window.addEventListener("scroll", function () {
+            var navigation = document.querySelector(".navigation");
+
+            // Überprüfen Sie, wie weit die Seite gescrollt wurde
+            if (window.scrollY > 0) {
+                // Wenn die Seite gescrollt wurde, fügen Sie die CSS-Klasse "black-bg" hinzu
+                navigation.classList.add("black-bg");
+            } else {
+                // Andernfalls entfernen Sie die CSS-Klasse "black-bg"
+                navigation.classList.remove("black-bg");
+            }
+        });
+        
     </script>
 </head>
 
@@ -320,12 +334,18 @@
                 Gallery.
             </div>
             <div class="gallery-block">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
+                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                    alt="p1">
             </div>
         </div>
     </div>
