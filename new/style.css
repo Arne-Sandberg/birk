@@ -523,6 +523,10 @@ body {
     flex-direction: column;
 }
 
+.agent-content {
+    min-width: 50%;
+}
+
 /** */
 
 .other-projects-content {
