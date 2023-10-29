@@ -353,7 +353,6 @@ body {
 
 
 .more-contact-content-background-wrapper {
-    display: flex;
     width: auto;
     height: 150px;
     z-index: -1;
@@ -361,13 +360,12 @@ body {
 }
 
 .more-contact-content-background {
-    display: flex;
+    position: relative;
     background-size: cover;
     background-position: center center;
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    width: 100%;
     opacity: 0.15;
 }
 
@@ -379,11 +377,12 @@ body {
 }
 
 .more-contact-background-color-dark {
+    position: relative;
     background-color: #000;
     width: 100%;
     height: 100%;
     z-index: -2;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
 }
 
 /** */
