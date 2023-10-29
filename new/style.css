@@ -452,12 +452,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 16px;
 
 }
 
 .gallery-item {
-    min-width: 32%;
-    max-width: 50%;
+   width: 33%;
 }
 
 /** */
@@ -470,7 +470,6 @@ body {
 }
 
 .quote-background-wrapper {
-    display: flex;
     width: auto;
     height: 220px;
     z-index: -1;
@@ -478,13 +477,11 @@ body {
 }
 
 .quote-background {
-    display: flex;
     background-size: cover;
     background-position: center center;
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    width: 100%;
     opacity: 0.15;
 }
 
@@ -500,7 +497,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -2;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
 }
 
 /** */
