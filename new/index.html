@@ -15,7 +15,7 @@
             const picture3 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-03.jpg"
             const picture4 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
 
-            const pictures = [picture1, picture2, picture3, picture4 ]
+            const pictures = [picture1, picture2, picture3, picture4]
 
             for (let i = 0; i < pictures.length; i++) {
                 console.log(i, pictures.length)
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div>
+    <div style="margin-bottom: -4px;">
         <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
         <img id="test1" class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
             alt="home">
@@ -109,7 +109,20 @@
             </div>
             <div class="background-color-dark"></div>
         </div>
+    </div>
 
+    <div class="about-content">
+        <div class="container">
+            <div class="about-title">
+                About the project.
+            </div>
+            <div class="about-text-block">
+                <div class="about-text">
+                    text
+                </div>
+                <img class="about-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg" alt="">
+            </div>
+        </div>
     </div>
 
     <div class="key-fact-list-content">
@@ -169,7 +182,7 @@
         </div>
     </div>
 
-    <div id="concept" class="features-content">
+    <div id="concept" class="features-content background-grey">
         <div class="container">
             <div class="features-text-wrapper">
                 <div class="features-title">
@@ -308,7 +321,8 @@
             </div>
             <div class="gallery-block">
                 <div class="gallery-item">
-                    A
+                    <img src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                <div>
                 </div>
                 <div class="gallery-item">
                     A
@@ -342,6 +356,8 @@
             <div class="agent-block">
                 <div class="agent-description-section">
                     <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
+                </div>
+                <div>
                     {{broker.name}}
                     {{broker.position}}
                     <a href="mailto:{{ broker.contactEmail }}">{{ broker.contactEmail }}</a>
@@ -360,6 +376,7 @@
 
     </div>
 
+    <!--
     <div class="other-projects-content">
         <div class="container">
             <div class="other-projects-text-wrapper">
@@ -407,12 +424,13 @@
             </div>
         </div>
     </div>
-
+    
     <div class="logo-slider-content">
         <div class="container">
             Logo Slider
         </div>
     </div>
+    -->
 
     <div class="footer">
         <div class="container">
