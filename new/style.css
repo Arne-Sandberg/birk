@@ -40,7 +40,8 @@ body {
 
 /* CSS für die Navigationsleiste mit schwarzer Hintergrundfarbe */
 .navigation.black-bg {
-    background-color: black;
+    background-color: grey;
+    z-index: 100;
 }
 
 /* .navigation black after */
