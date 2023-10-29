@@ -521,7 +521,6 @@ body {
 .agent-description-section{
     display: flex;
     flex-direction: column;
-    height: 240px;
 }
 
 /** */
