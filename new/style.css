@@ -234,6 +234,7 @@ body {
 
 .about-text {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding-left: 15px;
     padding-right: 15px;
