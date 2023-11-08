@@ -10,6 +10,7 @@
         const delay = ms => new Promise(res => setTimeout(res, ms));
 
         async function imgSlider() {
+
             const picture1 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
             const picture2 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-02.jpg"
             const picture3 = "https://arne-sandberg.github.io/birk/assets/img/gallery-big-03.jpg"
@@ -18,13 +19,10 @@
             const pictures = [picture1, picture2, picture3, picture4]
 
             for (let i = 0; i < pictures.length; i++) {
-                console.log(i, pictures.length)
-                console.log("1")
+                // console.log(i, pictures.length)
                 await delay(6000);
-                console.log("2")
                 document.getElementById("test1").src = pictures[i]
                 if (i === (pictures.length - 1)) {
-                    console.log("hihi")
                     i = -1;
                 }
             }
@@ -150,8 +148,10 @@
             </div>
             <div class="about-text-block">
                 <div class="about-text">
-                    text
+                    {{ project.title }}
+                    {% if project.tagline %} {{ project.tagline }} {% endif %}
                 </div>
+                <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
                 <img class="about-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg" alt="">
             </div>
         </div>
@@ -330,7 +330,7 @@
     <div class="chose-apartment-content">
         <div class="container">
             <div class="chose-apartment-title">
-                Chose your apartment.
+                Chose your apartment. / Wähle dein Appartment
             </div>
             <div class="chose-apartment-options">
                 <div>Apartment</div>
@@ -343,7 +343,12 @@
                 <div>Status</div>
                 <div>Link</div>
             </div>
+            <div>
+
+            </div>
+
         </div>
+
     </div>
 
     <div id="gallery" class="gallery-content">
@@ -351,8 +356,19 @@
             <div class="gallery-title">
                 Gallery.
             </div>
+            <!-- <div> A {{ property.id }}</div> -->
             <div class="gallery-block">
-                <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
+                <!-- {{ property.images[0].url }} -->
+                {% for image in property.images %}
+                <!-- {% if image.title %} {{ image.title }} {% endif %} -->
+                <img src="{{ image.url }}" class="gallery-item">
+                </img>
+                {% endfor %}
+                <!-- <div class="image-cell" title="{{ image.title }}" data-src="{{ image.photoUrl }}">
+                  
+                </div> -->
+
+                <!-- <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
                     alt="p1">
                 <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
                     alt="p1">
@@ -363,9 +379,11 @@
                 <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
                     alt="p1">
                 <img class="gallery-item" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg"
-                    alt="p1">
+                    alt="p1"> -->
+
             </div>
         </div>
+
     </div>
 
     <div class="quote-content">

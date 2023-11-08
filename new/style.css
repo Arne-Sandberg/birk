@@ -64,7 +64,7 @@ body {
     height: 40px;
     margin-top: 15px;
     margin-bottom: 15px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .hover-element {
@@ -520,7 +520,7 @@ body {
 .gallery-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 16px;
 
