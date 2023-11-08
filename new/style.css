@@ -70,7 +70,7 @@ body {
 .nav-element {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
 }
@@ -79,28 +79,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/** 
- old setup 
-    .hover-effect:hover span .hover-element {
+.hover-effect:hover span .hover-element {
     -moz-transform: translateY(100%);
     -ms-transform: translateY(100%);
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
-  }
-  .hover-effect:hover span .hover-element:nth-child(2) {
+}
+
+.hover-effect:hover span .hover-element:nth-child(2) {
     -moz-transform: translateY(0%);
     -ms-transform: translateY(0%);
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
-  }
-  .hover-effect span {
+}
+
+.hover-effect span {
     position: relative;
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
     top: -1px;
-  }
-  .hover-effect span .hover-element {
+}
+
+.hover-effect span .hover-element {
     -moz-transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
@@ -111,8 +112,9 @@ body {
     position: relative;
     overflow: hidden;
     /*padding: 2px 0; */
- /** } 
-  .hover-effect span .hover-element:nth-child(2) {
+}
+
+.hover-effect span .hover-element:nth-child(2) {
     -moz-transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
@@ -123,7 +125,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-  } */
+}
+
+/** */
 
 .hero-img {
     width: 100%;
@@ -192,7 +196,7 @@ body {
 
 /** */
 
-.about-content  {
+.about-content {
     height: 520px;
     width: 100%;
     background-color: #F2F2F2;
@@ -205,7 +209,7 @@ body {
     padding-bottom: 60px;
 }
 
-.about-options{
+.about-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -289,8 +293,13 @@ body {
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .site-plan-image {
@@ -460,7 +469,7 @@ body {
     margin-bottom: 60px;
 }
 
-.pricing-options{
+.pricing-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -482,7 +491,7 @@ body {
     padding-bottom: 60px;
 }
 
-.chose-apartment-options{
+.chose-apartment-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -512,7 +521,7 @@ body {
 }
 
 .gallery-item {
-   width: 32%;
+    width: 32%;
 }
 
 /** */
@@ -572,7 +581,7 @@ body {
     justify-content: space-between;
 }
 
-.agent-description-section{
+.agent-description-section {
     display: flex;
     flex-direction: column;
 }
@@ -686,6 +695,6 @@ body {
 
 /** */
 
-.background-grey{
+.background-grey {
     background-color: #F2F2F2;
 }
