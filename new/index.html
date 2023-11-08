@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-    <title>{{ property.title }} | {{ shop.name }}</title>
+    <title>{{ project.title }} | {{ project.shop.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="https://arne-sandberg.github.io/birk/new/style.css">
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="header">
                 <div class="left">
-                    <img src="{{ shop.logoUrl }}" alt="Logo" class="logo-nav" />
+                    <img src="{{ project.shop.logoUrl }}" alt="Logo" class="logo-nav" />
                 </div>
                 <div class="right">
                     <div class="nav">
@@ -99,9 +99,9 @@
     </div>
 
     <div style="margin-bottom: -4px;">
-        <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
-        <img id="test1" class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
-            alt="home">
+        <img class="hero-img" src="{{ project.images[0].photoUrl }}" alt="home">
+        <!-- <img id="test1" class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
+            alt="home">  -->
         <div class="hero-text">
             <h2>Get Ready.<br>We're finishing!</h2>
         </div>
@@ -148,11 +148,14 @@
             </div>
             <div class="about-text-block">
                 <div class="about-text">
-                    {{ project.title }}
-                    {% if project.tagline %} {{ project.tagline }} {% endif %}
+                    | {{ project.title }}
+                    | {{ project.name }}
+                    {% if property.tagline %} {{ property.tagline }} {% endif %}
+                    ---
+                    {{ t.description }}
                 </div>
                 <!-- <img class="hero-img" src="{{ property.images[0].url }}" alt="home"> -->
-                <img class="about-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg" alt="">
+                <img class="about-image" src="{{ project.images[1].photoUrl }}" alt="">
             </div>
         </div>
     </div>
@@ -180,6 +183,7 @@
         </div>
     </div>
 
+    {% if project.locationNote %}
     <div id="site" class="site-plan-content">
         <div class="container">
             <div class="site-plan-title">
@@ -191,11 +195,37 @@
                 <img class="site-plan-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
                     alt="">
                 <div class="site-plan-text">
-                    text
+                    {{ project.locationNote }}
                 </div>
             </div>
         </div>
     </div>
+    {% endif %}
+
+    <section id="map">
+        {% if project.customFields.strasse_auf_landingpage_nicht_anzeigen %} {% if project.zipCode %}
+        <div class="map-container pt-4">
+          <div class="embed-responsive embed-responsive-21by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://maps.google.de/maps?hl=de&q={{ project.zipCode }} {{ project.city }}&ie=UTF8&output=embed"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+        {% endif %} {% else %} {% if project.lat %}
+        <div class="map-container pt-4">
+          <div class="embed-responsive embed-responsive-21by9">
+            <div
+              id="map-wrap"
+              data-lat="{{ project.lat }}"
+              data-lng="{{ project.lng }}"
+              class="embed-responsive-item"
+            ></div>
+          </div>
+        </div>
+        {% endif %} {% endif %}
+      </section>
 
     <div class="site-details-content">
         <div class="container">
@@ -296,22 +326,24 @@
         </div>
     </div>
     <!-- TODO class -->
+    {% if project.furnishingNote %}
     <div class="apartment-furnishings-content">
         <div class="container">
             <div class="site-details-title">
                 <h3 class="site-details-framed">
-                    apartment-furnishings-content
+                    {{ t.furnishing }}
                 </h3>
             </div>
             <div class="site-details-text-block">
                 <div class="site-details-text">
-                    text
+                    {{ project.furnishingNote }}
                 </div>
                 <img class="site-details-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
                     alt="">
             </div>
         </div>
     </div>
+    {% endif %}
 
     <div id="pricing" class="pricing-content">
         <div class="container">
@@ -364,6 +396,13 @@
                 <img src="{{ image.url }}" class="gallery-item">
                 </img>
                 {% endfor %}
+
+                {% for image in project.images %}
+                <!-- {% if image.title %} {{ image.title }} {% endif %} -->
+                <img src="{{ image.photoUrl }}" class="gallery-item">
+                </img>
+                {% endfor %}
+
                 <!-- <div class="image-cell" title="{{ image.title }}" data-src="{{ image.photoUrl }}">
                   
                 </div> -->
