@@ -40,7 +40,7 @@ body {
 
 /* CSS für die Navigationsleiste mit schwarzer Hintergrundfarbe */
 .navigation.black-bg {
-    background-color: grey;
+    background-color: #a9a9a9;
     z-index: 100;
 }
 
@@ -74,6 +74,56 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
+
+.nav-element span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/** 
+ old setup 
+    .hover-effect:hover span .hover-element {
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  .hover-effect:hover span .hover-element:nth-child(2) {
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .hover-effect span {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    top: -1px;
+  }
+  .hover-effect span .hover-element {
+    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    position: relative;
+    overflow: hidden;
+    /*padding: 2px 0; */
+ /** } 
+  .hover-effect span .hover-element:nth-child(2) {
+    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  } */
 
 .hero-img {
     width: 100%;
