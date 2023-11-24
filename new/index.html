@@ -340,6 +340,7 @@
     </div>
     {% endif %}
 
+    <!--
     <div id="pricing" class="pricing-content">
         <div class="container">
             <div class="pricing-title">
@@ -353,6 +354,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <div class="chose-apartment-content">
         <div class="container">
@@ -364,20 +366,7 @@
                 Wählen Sie Ihre Wohnung.
                 {% endif %}
             </div>
-            <div class="">
-                <div class="chose-apartment-options">
-                    <div>Apartment</div>
-                    <div>Rooms</div>
-                    <div>Building</div>
-                    <div>Floor</div>
-                    <div>Apartment area</div>
-                    <div>Balcony area</div>
-                    <div>Price</div>
-                    <div>Status</div>
-                    <div>Link</div>
-                </div>
-            </div>
-
+            
             <div class="">
                 <div class="chose-apartment-options-table-header">
                     <div data-col="unit_id">{{ t.unit }}</div>
@@ -399,14 +388,6 @@
                         {% endif %}
                     </div>
                     {% endif %}
-                </div>
-                <div>
-                    {% for unit in project.properties %}
-                    <div class="chose-apartment-options">
-                        <div class="">{{ unit.unitId }}</div>
-                        <div>{{ unit.numberOfRooms | number }}</div>
-                    </div>
-                    {% endfor %}
                 </div>
                 <div>
                     {% for unit in project.properties %}
@@ -540,160 +521,6 @@
                     {% endfor %}
                 </div>
             </div>
-
-            <div>
-
-                <table id="units-table" class="table table-responsive-xl">
-                    <thead>
-                        <tr>
-                            <th data-col="unit_id">{{ t.unit }}</th>
-                            {% for col in project.lpPropertyListColumns %} {% if col == "floorplan" %}
-                            <th data-col="floorplan" class="text-right" data-orderable="false">
-                                {{ "lp.general.download" | t }}
-                            </th>
-                            {% else %}
-                            <th data-col="{{ col }}" class="text-center">{{ t[col] }}</th>
-                            {% endif %} {% endfor %} {% if project.enableLinkingToUnitsLp %}
-                            <th data-col="link" class="text-center">{% if locale == "de" %}Link{% else %}Link{% endif %}
-                            </th>
-                            {% endif %}
-                        </tr>
-                    </thead>
-                    <tbody id="property-list">
-                        {% for unit in project.properties %}
-                        <tr id="p-row-{{ unit.id }}">
-                            <td data-col="unit_id">
-                                <span>{{ unit.unitId }}</span>
-                            </td>
-                            {% for col in project.lpPropertyListColumns %} {% case col %} {% when "floor" %}
-                            <td data-col="floor" class="text-center" data-order="{{ unit.floor }}">
-                                <span>{{ unit.floorLabel }}</span>
-                            </td>
-                            {% when "object_type" %}
-                            <td data-col="object_type" class="text-center" data-order="{{ unit.objectType }}">
-                                <span>{{ unit.objectType }}</span>
-                            </td>
-                            {% when "rs_category" %}
-                            <td data-col="rs_category" class="text-center" data-order="{{ unit.categoryLabel }}">
-                                <span>{{ unit.categoryLabel }}</span>
-                            </td>
-                            {% when "number_of_parking_spaces" %}
-                            <td data-col="number_of_parking_spaces" class="text-center"
-                                data-order="{{ unit.numberOfParkingSpaces }}">
-                                <span>{{ unit.numberOfParkingSpaces }}</span>
-                            </td>
-                            {% when "rooms" %}
-                            <td data-col="rooms" class="text-center" data-order="{{ unit.numberOfRooms }}">
-                                <span>{{ unit.numberOfRooms | number }}</span>
-                            </td>
-                            {% when "space" %}
-                            <td data-col="space" class="text-center" data-order="{{ unit.propertySpaceValue }}">
-                                <span>{{ unit.propertySpaceValue | number }} m²</span>
-                            </td>
-                            {% when "plot_area" %}
-                            <td data-col="plot_area" class="text-center" data-order="{{ unit.plotArea }}">
-                                <span>{{ unit.plotArea | number }} m²</span>
-                            </td>
-                            {% when "number_of_floors" %}
-                            <td data-col="number_of_floors" class="text-center" data-order="{{ unit.numberOfFloors }}">
-                                <span>{{ unit.numberOfFloors }}</span>
-                            </td>
-                            {% when "rented" %}
-                            <td data-col="rented" class="text-center" data-order="{{ unit.rented }}">
-                                {% if unit.rented %} {% if locale == "de" %}Ja{% else %}Yes{% endif %} {% else %}
-                                <span>–</span>
-                                {% endif %}
-                            </td>
-                            {% when "base_rent" %}
-                            <td data-col="base_rent" class="text-center" data-order="{{ unit.baseRent }}">
-                                <span>{{ unit.baseRent | price: currency }}</span>
-                            </td>
-                            {% when "rent_subsidy" %}
-                            <td data-col="rent_subsidy" class="text-center" data-order="{{ unit.rentSubsidy }}">
-                                <span>{{ unit.rentSubsidy | price: currency }}</span>
-                            </td>
-                            {% when "price" %}
-                            <td data-col="price" class="text-center" data-order="{{ unit.price }}">
-                                {% if unit.propertyStatus.nonpublic %}
-                                <span>–</span>
-                                {% else %}
-                                <span>{{ unit.price | price: currency }}</span>
-                                {% endif %}
-                            </td>
-                            {% when "price_per_sqm" %}
-                            <td data-col="price_per_sqm" class="text-center" data-order="{{ unit.pricePerSqm }}">
-                                <span>{{ unit.pricePerSqm | price: currency }}</span>
-                            </td>
-                            {% when "parking_space_price" %}
-                            <td data-col="parking_space_price" class="text-center"
-                                data-order="{{ unit.parkingSpacePrice }}">
-                                <span>{{ unit.parkingSpacePrice | price: currency }}</span>
-                            </td>
-                            {% when "status" %}
-                            <td data-col="status" class="text-center">
-                                {% if unit.propertyStatus.nonpublic %}
-                                <span>
-                                    <i class="fal fa-circle fa-fw text-danger"></i>
-                                    {{ unit.propertyStatus.name }}
-                                </span>
-                                {% else %}
-                                <span>
-                                    <i class="fal fa-circle fa-fw text-success"></i>
-                                    {{ unit.propertyStatus.name }}
-                                </span>
-                                {% endif %}
-                            </td>
-                            {% when "floorplan" %}
-                            <td data-col="floorplan" class="text-right">
-                                {% assign plan = unit.floorplans | map: 'url' | first %} {% if plan %} {% if
-                                unit.propertyStatus.name == "Verkauft" or unit.propertyStatus.name == "Reserviert" %}
-                                <span>
-                                    <a class="text-reset text-muted" href="javascript:void(0);">
-                                        <small>{% if locale == "de" %}Grundriss{% else %}Foorplan{% endif %}</small>
-                                    </a>
-                                </span>
-                                {% else %}
-                                <span>
-                                    <a class="text-reset" target="_blank" href="{{ plan }}">
-                                        <small>{% if locale == "de" %}Grundriss{% else %}Foorplan{% endif %}</small>
-                                    </a>
-                                </span>
-                                {% endif %} {% endif %}
-                            </td>
-                            {% when "street" %}
-                            <td data-col="street" class="text-center" data-order="{{ unit.streetLabel }}">
-                                <span>{{ unit.streetLabel }}</span>
-                            </td>
-                            {% else %}
-                            <td data-col="{{ col }}" class="text-center" data-order="{{ unit[col] }}">
-                                <span>{{ unit[col] }}</span>
-                            </td>
-                            {% endcase %} {% endfor %} {% if project.enableLinkingToUnitsLp %}
-                            <td data-col="link" class="text-center">
-                                {% if unit.lp_url %} {% if unit.propertyStatus.name == "Verkauft" or
-                                unit.propertyStatus.name ==
-                                "Reserviert" %}
-                                <span>
-                                    <a class="text-reset text-muted" href="javascript:void(0);">
-                                        <small>{% if locale == "de" %}Exposé{% else %}Expose{% endif %}</small>
-                                    </a>
-                                </span>
-                                {% else %}
-                                <span>
-                                    <a class="text-reset" target="_blank" href="{{ unit.lp_url }}">
-                                        <small>{% if locale == "de" %}Exposé{% else %}Expose{% endif %}</small>
-                                    </a>
-                                </span>
-                                {% endif %} {% endif %}
-                            </td>
-                            {% endif %}
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-
-            </div>
-
         </div>
     </div>
 
