@@ -506,6 +506,13 @@ body {
     gap: 30px
 }
 
+.chose-apartment-options-table{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 30px
+}
+
 /** */
 
 .gallery-content {
