@@ -357,18 +357,31 @@
     <div class="chose-apartment-content">
         <div class="container">
             <div class="chose-apartment-title">
-                Chose your apartment. / Wähle dein Appartment
+                {% if locale == "en" %}
+                Chose your apartment.
+                {% endif %}
+                {% if locale == "de" %}
+                Wählen Sie Ihre Wohnung.
+                {% endif %}
             </div>
-            <div class="chose-apartment-options">
-                <div>Apartment</div>
-                <div>Rooms</div>
-                <div>Building</div>
-                <div>Floor</div>
-                <div>Apartment area</div>
-                <div>Balcony area</div>
-                <div>Price</div>
-                <div>Status</div>
-                <div>Link</div>
+            <div class="">
+                <div class="chose-apartment-options">
+                    <div>Apartment</div>
+                    <div>Rooms</div>
+                    <div>Building</div>
+                    <div>Floor</div>
+                    <div>Apartment area</div>
+                    <div>Balcony area</div>
+                    <div>Price</div>
+                    <div>Status</div>
+                    <div>Link</div>
+                </div>
+                <div>
+                    {% for unit in project.properties %}
+                    <div class="">{{ unit.unitId }}</div>
+                    <div >{{ unit.objectType }}</div>
+                    {% endfor %}
+                </div>
             </div>
             <div>
 
