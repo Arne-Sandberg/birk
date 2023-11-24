@@ -73,11 +73,11 @@ body {
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: #B4B6B9;
 }
 
 .active {
-    color: yellow !important;
+    color: #ffffff !important;
 }
 
 .hover-effect:hover span .hover-element {
