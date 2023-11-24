@@ -507,10 +507,10 @@ body {
 }
 
 .chose-apartment-options-table{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    gap: 30px
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-template-rows: masonry; 
+    grid-gap: 1rem;
 }
 
 /** */
