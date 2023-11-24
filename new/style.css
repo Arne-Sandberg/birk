@@ -508,9 +508,8 @@ body {
 
 .chose-apartment-options-table{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    grid-template-rows: masonry; 
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 8px;
 }
 
 /** */
