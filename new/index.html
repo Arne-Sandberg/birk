@@ -103,7 +103,8 @@
         <!-- <img id="test1" class="hero-img" src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-01.jpg"
             alt="home">  -->
         <div class="hero-text">
-            <h2>Get Ready.<br>We're finishing!</h2>
+            <h2>Fertigstellen mit Finesse.<br> Immobilien mit Leidenschaft</h2>
+            <!-- <h2>Get Ready.<br>We're finishing!</h2> -->
         </div>
     </div>
 
@@ -144,7 +145,12 @@
     <div class="about-content">
         <div class="container">
             <div class="about-title">
+                {% if locale == "en" %}
                 About the project.
+                {% endif %}
+                {% if locale == "de" %}
+                Über das Projekt.
+                {% endif %}
             </div>
             <div class="about-text-block">
                 <div class="about-text">
@@ -192,7 +198,7 @@
                 </h3>
             </div>
             <div class="site-plan-text-block fade">
-                <img class="site-plan-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                <img class="site-plan-image" src="{{ project.images[2].photoUrl }}"
                     alt="">
                 <div class="site-plan-text">
                     {{ project.locationNote }}
@@ -232,7 +238,7 @@
                 <div class="site-details-text">
                     text
                 </div>
-                <img class="site-details-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                <img class="site-details-image" src="{{ project.images[3].photoUrl }}"
                     alt="">
             </div>
         </div>
@@ -247,7 +253,7 @@
                 <div class="features-text-block">
                     <div class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="{{ project.images[4].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">Modern & Safe Living</div>
                             <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare felis. Nam
@@ -258,7 +264,7 @@
                     </div>
                     <div class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="{{ project.images[5].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Peaceful Location
@@ -272,7 +278,7 @@
                     </div>
                     <di class="features-inside-text-block">
                         <img class="image-inside-text-block "
-                            src="https://arne-sandberg.github.io/birk/assets/img/gallery-big-04.jpg" alt="p1">
+                            src="{{ project.images[6].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Great Starting Prices
@@ -311,7 +317,7 @@
                 </h3>
             </div>
             <div class="site-plan-text-block">
-                <img class="site-plan-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                <img class="site-plan-image" src="{{ project.images[7].photoUrl }}"
                     alt="">
                 <div class="site-plan-text">
                     text
@@ -333,7 +339,7 @@
                     {{ project.furnishingNote }}
                     <!-- {{ project.longFurnishingNote }} -->
                 </div>
-                <img class="site-details-image" src="https://arne-sandberg.github.io/birk/assets/img/gallery-01.jpg"
+                <img class="site-details-image" src="{{ project.images[8].photoUrl }}"
                     alt="">
             </div>
         </div>
@@ -366,7 +372,7 @@
                 Wählen Sie Ihre Wohnung.
                 {% endif %}
             </div>
-            
+
             <div class="">
                 <div class="chose-apartment-options-table-header">
                     <div data-col="unit_id">{{ t.unit }}</div>
@@ -597,9 +603,10 @@
                     <a href="tel:{{ broker.contactPhone }}">{{ broker.contactCell }}</a>
                     {% endif %}
                 </div>
+                <!--
                 <div class="agent-contact">
                     contact
-                </div>
+                </div> -->
             </div>
         </div>
 

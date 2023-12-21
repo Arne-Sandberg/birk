@@ -204,7 +204,7 @@ body {
 /** */
 
 .about-content {
-    height: 520px;
+    min-height: 520px;
     width: 100%;
     background-color: #F2F2F2;
 }
