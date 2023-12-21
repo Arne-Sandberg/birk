@@ -290,6 +290,15 @@ body {
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 480px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .about-text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
 .about-image {
     width: 50%
 }
