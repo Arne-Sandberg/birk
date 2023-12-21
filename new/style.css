@@ -697,6 +697,20 @@ body {
     /** justify-content: space-between; */
 }
 
+@media only screen and (max-width: 480px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .agent-block {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        border: 15px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /** justify-content: space-between; */
+    }
+    
+}
+
 .agent-description-section {
     display: flex;
     flex-direction: column;
