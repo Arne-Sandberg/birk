@@ -343,7 +343,7 @@ body {
 /** */
 
 .site-plan-content {
-    height: 600px;
+    min-height: 600px;
 }
 
 .site-plan-title {
