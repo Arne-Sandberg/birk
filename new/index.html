@@ -189,7 +189,7 @@
         </div>
     </div>
 
-    {% if project.locationNote %}
+    {% if project.longLocationNote %}
     <div id="site" class="site-plan-content">
         <div class="container">
             <div class="site-plan-title">
@@ -201,7 +201,7 @@
                 <img class="site-plan-image" src="{{ project.images[2].photoUrl }}"
                     alt="">
                 <div class="site-plan-text">
-                    {{ project.locationNote }}
+                    {{ project.longLocationNote }}
                 </div>
             </div>
         </div>
@@ -589,18 +589,16 @@
     <div id="contact" class="agent-content">
         <div class="container">
             <div class="agent-block">
-                <div>
-                    <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
-                </div>
+                <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
                 <div class="agent-description-section">
                     {{broker.name}}
                     {{broker.position}}
-                    <a href="mailto:{{ broker.contactEmail }}">{{ broker.contactEmail }}</a>
-                    {% if broker.contactPhone %}
-                    <a href="tel:{{ broker.contactPhone }}">{{ broker.contactPhone }}</a>
+                    <a href="mailto:{{ broker.email }}">{{ broker.email }}</a>
+                    {% if broker.phone %}
+                    <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
                     {% endif %}
-                    {% if broker.contactCell %}
-                    <a href="tel:{{ broker.contactPhone }}">{{ broker.contactCell }}</a>
+                    {% if broker.phone %}
+                    <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
                     {% endif %}
                 </div>
                 <!--
