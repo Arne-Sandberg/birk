@@ -35,12 +35,12 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: rgb(0,0,0,0.5);
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 /* CSS für die Navigationsleiste mit schwarzer Hintergrundfarbe */
 .navigation.black-bg {
-    background-color: rgb(0,0,0,1);
+    background-color: rgb(0, 0, 0, 1);
     z-index: 100;
 }
 
@@ -57,15 +57,41 @@ body {
     height: 46px;
 }
 
-.nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    gap: 20px;
-    background-color: transparent;
+/* iPhone Hochformat (bis 320 Pixel) */
+@media only screen and (max-width: 320px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .nav {
+        display: none;
+    }
+}
+
+/* iPhone Querformat (bis 480 Pixel) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    /* Deine Styles für das iPhone Querformat hier */
+}
+
+/* iPad Hochformat (bis 768 Pixel) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Deine Styles für das iPad Hochformat hier */
+}
+
+/* iPad Querformat (bis 1024 Pixel) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Deine Styles für das iPad Querformat hier */
+}
+
+/* Deine Styles für Bildschirme ab 1024 Pixel hier */
+@media only screen and (min-width: 1025px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        gap: 20px;
+        background-color: transparent;
+    }
 }
 
 .hover-element {
@@ -138,15 +164,26 @@ body {
     margin-top: -70px;
 }
 
-.hero-text {
-    position: absolute;
-    top: 40vh;
-    left: 10vw;
-    font-size: 48px;
-    color: #ffffff;
-    font-weight: bold;
-    line-height:1.1;
-    font-family: "Montserrat, sans-serif";
+/* iPhone Hochformat (bis 320 Pixel) */
+@media only screen and (max-width: 320px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .hero-text {
+        display: none;
+    }
+}
+
+/* Deine Styles für Bildschirme ab 1024 Pixel hier */
+@media only screen and (min-width: 1025px) {
+    .hero-text {
+        position: absolute;
+        top: 40vh;
+        left: 10vw;
+        font-size: 48px;
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 1.1;
+        font-family: "Montserrat, sans-serif";
+    }
 }
 
 .page-content {
@@ -510,13 +547,13 @@ body {
     gap: 30px
 }
 
-.chose-apartment-options-table-header{
+.chose-apartment-options-table-header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 8px;
 }
 
-.chose-apartment-options-table{
+.chose-apartment-options-table {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 8px;
