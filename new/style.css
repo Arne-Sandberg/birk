@@ -371,6 +371,7 @@ body {
 
 .features-content {
     height: 540px;
+    padding-bottom: 60px;
 }
 
 .features-text-wrapper {

@@ -592,10 +592,11 @@
                 <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
                 <div class="agent-description-section">
                     {{broker.name}}
+                    {% if broker.position %}
                     {{broker.position}}
+                    {% endif %}
+                    {% if broker.email %}
                     <a href="mailto:{{ broker.email }}">{{ broker.email }}</a>
-                    {% if broker.phone %}
-                    <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
                     {% endif %}
                     {% if broker.phone %}
                     <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
