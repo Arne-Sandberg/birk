@@ -175,7 +175,7 @@ body {
 }
 
 /* iPhone Hochformat (bis 320 Pixel) */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     /* Deine Styles für das iPhone Hochformat hier */
     .hero-text {
         display: none;
@@ -184,16 +184,18 @@ body {
 
 /* Deine Styles für Bildschirme ab 1024 Pixel hier */
 @media only screen and (min-width: 1025px) {
-    .hero-text {
-        position: absolute;
-        top: 40vh;
-        left: 10vw;
-        font-size: 48px;
-        color: #ffffff;
-        font-weight: bold;
-        line-height: 1.1;
-        font-family: "Montserrat, sans-serif";
-    }
+    
+}
+
+.hero-text {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: "Montserrat, sans-serif";
 }
 
 .page-content {
