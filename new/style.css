@@ -68,6 +68,9 @@ body {
 /* iPhone Querformat (bis 480 Pixel) */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
     /* Deine Styles für das iPhone Querformat hier */
+    .nav {
+        display: none;
+    }
 }
 
 /* iPad Hochformat (bis 768 Pixel) */
@@ -366,6 +369,7 @@ body {
 
 .site-details-content {
     height: 600px;
+    padding-bottom: 60px;
 }
 
 .site-details-title {
