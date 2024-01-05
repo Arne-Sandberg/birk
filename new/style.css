@@ -796,6 +796,8 @@ body {
     /* Deine Styles für das iPhone Hochformat hier */
     .agent-block {
         margin-bottom: 70px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         border: 15px solid rgba(0, 0, 0, 0.05);
         display: flex;
         flex-direction: column;
