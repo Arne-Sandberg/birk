@@ -588,15 +588,16 @@
             <div class="agent-block">
                 <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
                 <div class="agent-description-section">
-                    Ihr Kontakt: {{broker.name}}
+
+                    <p>Ihr Kontakt: {{broker.name}}</p>
                     {% if broker.position %}
-                    {{broker.position}}
+                    <p>{{broker.position}}</p>
                     {% endif %}
                     {% if broker.email %}
-                    Per Mail:<a href="mailto:{{ broker.email }}">{{ broker.email }}</a>
+                    <p>Per Mail: <a href="mailto:{{ broker.email }}">{{ broker.email }}</a></p>
                     {% endif %}
                     {% if broker.phone %}
-                    Per Telefon: <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
+                    <p>Per Telefon: <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a></p>
                     {% endif %}
                 </div>
                 <!--
