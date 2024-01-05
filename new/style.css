@@ -442,6 +442,7 @@ body {
     padding-right: 15px;
     width: 50%;
     object-fit: contain;
+    object-position: top;
 }
 
 .site-plan-text {
@@ -504,6 +505,7 @@ body {
     padding-right: 70px;
     width: 50%;
     object-fit: contain;
+    object-position: top;
 }
 
 .site-details-text {
