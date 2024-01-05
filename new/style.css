@@ -57,20 +57,30 @@ body {
     height: 46px;
 }
 
+.nav-small{
+    display: none;   
+}
+
+
 @media only screen and (max-width: 480px) {
 
     /* Deine Styles für das iPhone Hochformat hier */
     .not-show-max-480 {
         display: none;
     }
+    .nav-small{
+        display: flex
+    }
 }
 
 /* iPhone Hochformat (bis 320 Pixel) */
 @media only screen and (max-width: 320px) {
-
     /* Deine Styles für das iPhone Hochformat hier */
     .nav {
         display: none;
+    }
+    .nav-small{
+        display: flex;
     }
 }
 
@@ -80,6 +90,9 @@ body {
     /* Deine Styles für das iPhone Querformat hier */
     .nav {
         display: none;
+    }
+    .nav-small{
+        display: flex;
     }
 }
 
