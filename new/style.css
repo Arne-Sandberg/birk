@@ -562,6 +562,7 @@ body {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     border-style: none;
+    cursor: pointer;
 }
 
 .button-to-contact a {
