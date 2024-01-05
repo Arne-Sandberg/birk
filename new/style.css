@@ -57,8 +57,8 @@ body {
     height: 46px;
 }
 
-.nav-small{
-    display: none;   
+.nav-small {
+    display: none;
 }
 
 
@@ -68,18 +68,21 @@ body {
     .not-show-max-480 {
         display: none;
     }
-    .nav-small{
+
+    .nav-small {
         display: flex
     }
 }
 
 /* iPhone Hochformat (bis 320 Pixel) */
 @media only screen and (max-width: 320px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .nav {
         display: none;
     }
-    .nav-small{
+
+    .nav-small {
         display: flex;
     }
 }
@@ -91,7 +94,8 @@ body {
     .nav {
         display: none;
     }
-    .nav-small{
+
+    .nav-small {
         display: flex;
     }
 }
@@ -201,7 +205,6 @@ body {
     .hero-img {
         height: 50vh;
     }
-
 }
 
 /* Deine Styles für Bildschirme ab 1024 Pixel hier */
@@ -227,6 +230,13 @@ body {
 .ppp-content {
     position: relative;
     height: 370px;
+}
+
+@media only screen and (max-width: 480px) {
+    .ppp-content {
+        position: relative;
+        height: 210px;
+    }
 }
 
 .ppp-background-wrapper {
@@ -342,6 +352,12 @@ body {
     height: 220px;
 }
 
+@media only screen and (max-width: 480px) {
+    .key-fact-list-content {
+        display: none;
+    }
+}
+
 .kfl-text-block {
     display: flex;
     flex-direction: row;
@@ -399,10 +415,16 @@ body {
     /* Deine Styles für das iPhone Hochformat hier */
     .site-plan-text-block {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         animation: fadein 2s;
     }
+
+    .site-plan-image {
+        width: 100%;
+        object-fit: contain;
+    }
+    
 }
 
 @keyframes fadein {
@@ -469,6 +491,12 @@ body {
         flex-direction: column;
         justify-content: space-between;
     }
+
+    .site-details-image {
+        width: 100%;
+        object-fit: contain;
+    }
+
 }
 
 .site-details-image {
@@ -694,6 +722,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .gallery-block {
         gap: 4px;
@@ -766,8 +795,7 @@ body {
 
     /* Deine Styles für das iPhone Hochformat hier */
     .agent-block {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        margin-bottom: 70px;
         border: 15px solid rgba(0, 0, 0, 0.05);
         display: flex;
         flex-direction: column;
@@ -781,7 +809,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.05);
-    padding: 16px
+    padding: 16px;
+    margin: 16px;
 }
 
 .agent-contact {
