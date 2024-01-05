@@ -408,7 +408,7 @@ body {
 /** */
 
 .site-details-content {
-    height: 600px;
+    min-height: 600px;
     padding-bottom: 60px;
 }
 
@@ -462,7 +462,7 @@ body {
 /** */
 
 .features-content {
-    height: 540px;
+    min-height: 540px;
     padding-bottom: 60px;
 }
 
@@ -481,12 +481,19 @@ body {
 }
 
 .features-text-block {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .features-text-block {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .features-inside-text-block {
@@ -546,16 +553,26 @@ body {
     transform: translateY(-100%);
 }
 
+.button-to-contact {
+    background-color: #F2F2F2;
+    width: 128px;
+    height: 64px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
 /** */
 
 .details-content {
-    height: 600px;
+    min-height: 600px;
 }
 
 /** */
 
 .apartment-furnishings-content {
-    height: 600px;
+    min-height: 600px;
 }
 
 /** */
@@ -632,7 +649,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 16px;
+}
 
+@media only screen and (max-width: 480px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .gallery-block  {
+        gap: 4px;
+    }
 }
 
 .gallery-item {
@@ -684,7 +707,7 @@ body {
 /** */
 
 .agent-content {
-    height: 480px;
+    min-height: 480px;
 }
 
 .agent-block {

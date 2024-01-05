@@ -199,8 +199,7 @@
                 </h3>
             </div>
             <div class="site-plan-text-block fade">
-                <img class="site-plan-image" src="{{ project.images[2].photoUrl }}"
-                    alt="">
+                <img class="site-plan-image" src="{{ project.images[2].photoUrl }}" alt="">
                 <div class="site-plan-text">
                     {{ project.longLocationNote }}
                 </div>
@@ -239,8 +238,7 @@
                 <div class="site-details-text">
                     {{ project.locationNote }}
                 </div>
-                <img class="site-details-image" src="{{ project.images[3].photoUrl }}"
-                    alt="">
+                <img class="site-details-image" src="{{ project.images[3].photoUrl }}" alt="">
             </div>
         </div>
     </div>
@@ -253,8 +251,7 @@
                 </div>
                 <div class="features-text-block">
                     <div class="features-inside-text-block">
-                        <img class="image-inside-text-block "
-                            src="{{ project.images[4].photoUrl }}" alt="p1">
+                        <img class="image-inside-text-block " src="{{ project.images[4].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">Modern & Safe Living</div>
                             <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare felis. Nam
@@ -264,8 +261,7 @@
                         </div>
                     </div>
                     <div class="features-inside-text-block">
-                        <img class="image-inside-text-block "
-                            src="{{ project.images[5].photoUrl }}" alt="p1">
+                        <img class="image-inside-text-block " src="{{ project.images[5].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Peaceful Location
@@ -278,8 +274,7 @@
                         </div>
                     </div>
                     <di class="features-inside-text-block">
-                        <img class="image-inside-text-block "
-                            src="{{ project.images[6].photoUrl }}" alt="p1">
+                        <img class="image-inside-text-block " src="{{ project.images[6].photoUrl }}" alt="p1">
                         <div>
                             <div class="features-inside-text-title">
                                 Great Starting Prices
@@ -299,7 +294,7 @@
     <div class="more-contact-content">
         <div class="container">
             <div class="more-contact-content-text-block background-is-dark">
-                more-contact-content
+                <button class="button-to-contact" href="#contact">zum Kontakt</button>
             </div>
             <div class="more-contact-content-background-wrapper">
                 <div class="more-contact-content-background"
@@ -318,8 +313,7 @@
                 </h3>
             </div>
             <div class="site-plan-text-block">
-                <img class="site-plan-image" src="{{ project.images[7].photoUrl }}"
-                    alt="">
+                <img class="site-plan-image" src="{{ project.images[7].photoUrl }}" alt="">
                 <div class="site-plan-text">
                     text
                 </div>
@@ -340,8 +334,7 @@
                     {{ project.furnishingNote }}
                     <!-- {{ project.longFurnishingNote }} -->
                 </div>
-                <img class="site-details-image" src="{{ project.images[8].photoUrl }}"
-                    alt="">
+                <img class="site-details-image" src="{{ project.images[8].photoUrl }}" alt="">
             </div>
         </div>
     </div>
@@ -576,7 +569,8 @@
     <div class="quote-content">
         <div class="container">
             <div class="quote-text-block background-is-dark">
-                <q>Ein Haus sollte die Freude am Leben verkörpern, ein Ort des Glücks und der Harmonie sein, ein Ort, um sich zu entspannen und wiederzufinden. <br> - Frank Lloyd Wright</q>
+                <q>Ein Haus sollte die Freude am Leben verkörpern, ein Ort des Glücks und der Harmonie sein, ein Ort, um
+                    sich zu entspannen und wiederzufinden. <br> - Frank Lloyd Wright</q>
             </div>
             <div class="quote-background-wrapper">
                 <div class="quote-background"
@@ -592,15 +586,15 @@
             <div class="agent-block">
                 <img class="agent-rounded" src="{{ broker.avatarUrl }}" />
                 <div class="agent-description-section">
-                    {{broker.name}}
+                    Ihr Kontakt: {{broker.name}}
                     {% if broker.position %}
                     {{broker.position}}
                     {% endif %}
                     {% if broker.email %}
-                    <a href="mailto:{{ broker.email }}">{{ broker.email }}</a>
+                    Per Mail:<a href="mailto:{{ broker.email }}">{{ broker.email }}</a>
                     {% endif %}
                     {% if broker.phone %}
-                    <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
+                    Per Telefon: <a href="tel:{{ broker.phone }}">{{ broker.phone }}</a>
                     {% endif %}
                 </div>
                 <!--
