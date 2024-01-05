@@ -311,7 +311,8 @@ body {
 }
 
 .about-image {
-    width: 50%
+    width: 50%;
+    object-fit: contain;
 }
 
 .about-text {
@@ -404,7 +405,8 @@ body {
 .site-plan-image {
     padding-left: 70px;
     padding-right: 15px;
-    width: 50%
+    width: 50%;
+    object-fit: contain;
 }
 
 .site-plan-text {
@@ -459,7 +461,8 @@ body {
 .site-details-image {
     padding-left: 15px;
     padding-right: 70px;
-    width: 50%
+    width: 50%;
+    object-fit: contain;
 }
 
 .site-details-text {
@@ -669,19 +672,23 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 16px;
-}
-
-@media only screen and (max-width: 480px) {
-
-    /* Deine Styles für das iPhone Hochformat hier */
-    .gallery-block {
-        gap: 4px;
-    }
 }
 
 .gallery-item {
     width: 32%;
+}
+
+@media only screen and (max-width: 480px) {
+    /* Deine Styles für das iPhone Hochformat hier */
+    .gallery-block {
+        gap: 4px;
+    }
+
+    .gallery-item {
+        width: 48%;
+    }
 }
 
 /** */
@@ -760,6 +767,8 @@ body {
 .agent-description-section {
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 16px
 }
 
 .agent-contact {
