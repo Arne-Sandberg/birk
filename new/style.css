@@ -58,6 +58,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .not-show-max-480 {
         display: none;
@@ -66,6 +67,7 @@ body {
 
 /* iPhone Hochformat (bis 320 Pixel) */
 @media only screen and (max-width: 320px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .nav {
         display: none;
@@ -74,6 +76,7 @@ body {
 
 /* iPhone Querformat (bis 480 Pixel) */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Querformat hier */
     .nav {
         display: none;
@@ -176,16 +179,20 @@ body {
 
 /* iPhone Hochformat (bis 320 Pixel) */
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .hero-text {
         display: none;
     }
+
+    .hero-img {
+        height: 50vh;
+    }
+
 }
 
 /* Deine Styles für Bildschirme ab 1024 Pixel hier */
-@media only screen and (min-width: 1025px) {
-    
-}
+@media only screen and (min-width: 1025px) {}
 
 .hero-text {
     position: absolute;
@@ -243,6 +250,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .ppp-text-block {
         height: 230px;
@@ -293,6 +301,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .about-text-block {
         display: flex;
@@ -372,6 +381,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .site-plan-text-block {
         display: flex;
@@ -437,6 +447,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .site-details-text-block {
         display: flex;
@@ -489,6 +500,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .features-text-block {
         display: flex;
@@ -661,8 +673,9 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
-    .gallery-block  {
+    .gallery-block {
         gap: 4px;
     }
 }
@@ -730,6 +743,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* Deine Styles für das iPhone Hochformat hier */
     .agent-block {
         padding-top: 70px;
@@ -740,7 +754,7 @@ body {
         justify-content: space-around;
         /** justify-content: space-between; */
     }
-    
+
 }
 
 .agent-description-section {
