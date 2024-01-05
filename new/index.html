@@ -62,7 +62,7 @@
                                 <div class="hover-element active">Home</div>
                             </span>
                         </a>
-                        <a href="#site" id="site-nav" class="hover-effect" onclick="stateNav(event)">
+                        <a href="#location" id="site-nav" class="hover-effect" onclick="stateNav(event)">
                             <span>
                                 <div class="hover-element">Lage</div>
                                 <div class="hover-element active">Lage</div>
@@ -190,8 +190,10 @@
         </div>
     </div>
 
+    <div id="location"></div>
+
     {% if project.longLocationNote %}
-    <div id="site" class="site-plan-content">
+    <div class="site-plan-content">
         <div class="container">
             <div class="site-plan-title">
                 <h3 class="site-plan-framed">
@@ -356,7 +358,7 @@
     </div>
     -->
 
-    <div class="chose-apartment-content">
+    <div id="pricing" class="chose-apartment-content">
         <div class="container">
             <div class="chose-apartment-title">
                 {% if locale == "en" %}

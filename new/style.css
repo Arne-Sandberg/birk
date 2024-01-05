@@ -561,6 +561,7 @@ body {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
+    border-style: none;
 }
 
 /** */
@@ -573,6 +574,7 @@ body {
 
 .apartment-furnishings-content {
     min-height: 600px;
+    padding-bottom: 60px
 }
 
 /** */
