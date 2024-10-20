@@ -41,6 +41,14 @@
             }
         });
 
+        function Popup() {
+            var myDialog = document.createElement("dialog");
+            document.body.appendChild(myDialog)
+            var text = document.createTextNode("This is a dialog window");
+            myDialog.appendChild(text);
+            myDialog.showModal();
+        }
+
     </script>
 </head>
 
@@ -93,7 +101,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="nav-small">
+                    <div class="nav-small" onclick="Popup()">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
                             viewBox="0,0,256,256">
                             <g fill="#b4b6b9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
